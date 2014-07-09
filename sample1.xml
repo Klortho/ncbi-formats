@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Author xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="sample1.xsd"
+        gender="male">
+  <LastName>Maloney</LastName>
+  <FirstName>Chris</FirstName>
+  <Initials>F</Initials>
+  <Suffix>the great</Suffix>
+</Author>

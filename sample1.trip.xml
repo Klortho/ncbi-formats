@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Author xmlns="http://www.ncbi.nlm.nih.gov"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="sample1.trip.xsd">
+  <attlist>
+    <gender value="male"/>
+  </attlist>
+  <lastName>Maloney</lastName>
+  <fF>
+    <fM>
+      <firstName>Chris</firstName>
+    </fM>
+  </fF>
+  <initials>F</initials>
+  <suffix>the great</suffix>
+</Author>

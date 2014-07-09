@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- ============================================
+     ::DATATOOL:: Generated from "sample1.asn1"
+     ::DATATOOL:: by application DATATOOL version 2.11.0
+     ::DATATOOL:: on 07/08/2014 22:04:30
+     ============================================ -->
+
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ncbi="http://www.ncbi.nlm.nih.gov"
+  xmlns="http://www.ncbi.nlm.nih.gov"
+  targetNamespace="http://www.ncbi.nlm.nih.gov"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+
+<!-- ============================================ -->
+<!-- This section is mapped from module "Sample1"
+================================================= -->
+<!--
+ ============================================
+ ::DATATOOL:: Generated from "sample1.xsd"
+ ::DATATOOL:: by application DATATOOL version 2.11.0
+ ::DATATOOL:: on 07/08/2014 21:45:36
+ ============================================
+-->
+
+
+<xs:element name="Author">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="attlist">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="gender" minOccurs="0">
+              <xs:complexType>
+                <xs:attribute name="value" use="required">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:enumeration value="male"/>
+                      <xs:enumeration value="female"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="lastName" type="xs:string"/>
+      <xs:element name="fF" minOccurs="0">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="foreName" type="xs:string"/>
+            <xs:element name="fM">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="firstName" type="xs:string"/>
+                  <xs:element name="middleName" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="initials" type="xs:string" minOccurs="0"/>
+      <xs:element name="suffix" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

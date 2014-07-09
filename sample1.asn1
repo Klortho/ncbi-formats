@@ -1,0 +1,30 @@
+-- ============================================
+-- ::DATATOOL:: Generated from "sample1.xsd"
+-- ::DATATOOL:: by application DATATOOL version 2.11.0
+-- ::DATATOOL:: on 07/08/2014 21:45:36
+-- ============================================
+
+Sample1 DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+
+Author ::= SEQUENCE {
+  attlist SET {
+    gender ENUMERATED {
+      male (1),
+      female (2)
+    } OPTIONAL
+  },
+  lastName VisibleString,
+  fF CHOICE {
+    foreName VisibleString,
+    fM SEQUENCE {
+      firstName VisibleString,
+      middleName VisibleString OPTIONAL
+    }
+  } OPTIONAL,
+  initials VisibleString OPTIONAL,
+  suffix VisibleString OPTIONAL
+}
+
+END
+

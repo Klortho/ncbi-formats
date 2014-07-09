@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  This example is from http://www.ncbi.nlm.nih.gov/toolkit/doc/book/ch_app/#ch_app.datatool.
+  Translate it into ASN.1 with
+    datatool -m sample1.xsd -f sample1.asn1
+  Then, round-trip it with 
+    datatool -m sample1.asn1 -sxo -fxs sample1.trip.xsd
+    
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified"> 
+
+  <xs:element name="Author">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LastName" type="xs:string"/>
+        <xs:choice minOccurs="0">
+          <xs:element name="ForeName" type="xs:string"/>
+          <xs:sequence>
+            <xs:element name="FirstName" type="xs:string"/>
+            <xs:element name="MiddleName" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element name="Initials" type="xs:string" minOccurs="0"/>
+        <xs:element name="Suffix" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="gender" use="optional">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="male"/>
+            <xs:enumeration value="female"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
